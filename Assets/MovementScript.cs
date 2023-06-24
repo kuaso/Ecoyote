@@ -30,15 +30,15 @@ public class MovementScript : MonoBehaviour
         {
             if (_rightVelocity == 0f)
             {
-                _rightVelocity = 0.3f;
+                _rightVelocity = 0.5f;
             }
-            else if (_rightVelocity < 2f)
+            else if (_rightVelocity < 5f)
             {
                 _rightVelocity *= 1.1f;
             }
             else
             {
-                _rightVelocity = 2f;
+                _rightVelocity = 5f;
             }
 
             x += _rightVelocity;
@@ -52,15 +52,15 @@ public class MovementScript : MonoBehaviour
         {
             if (_leftVelocity == 0f)
             {
-                _leftVelocity = 0.3f;
+                _leftVelocity = 0.5f;
             }
-            else if (_leftVelocity < 2f)
+            else if (_leftVelocity < 5f)
             {
                 _leftVelocity *= 1.1f;
             }
             else
             {
-                _leftVelocity = 2f;
+                _leftVelocity = 5f;
             }
 
             x -= _leftVelocity;
