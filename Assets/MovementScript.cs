@@ -8,6 +8,7 @@ public class MovementScript : MonoBehaviour
 {
 
     public Rigidbody2D coyoteRigidbody;
+    private bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,19 @@ public class MovementScript : MonoBehaviour
             var alteredXVelocity = (coyoteRigidbody.velocity.x * 0.95f);
             if (Math.Round(alteredXVelocity, 10) != 0) x = alteredXVelocity; 
         }
+        
+        if (x >= 0 && !facingRight) FlipCharacter();
+        else if (x < 0 && facingRight) FlipCharacter();
 
-        coyoteRigidbody.velocity = new Vector2(x, coyoteRigidbody.velocity.y);
+            coyoteRigidbody.velocity = new Vector2(x, coyoteRigidbody.velocity.y);
+    }
+
+    void FlipCharacter()
+    {
+        var currentScale = coyoteRigidbody.transform.localScale;
+        currentScale.x *= -1;
+        coyoteRigidbody.transform.localScale = currentScale;
+        
+        facingRight = !facingRight;
     }
 }
