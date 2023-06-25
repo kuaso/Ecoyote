@@ -270,7 +270,7 @@ SpriteRenderer:
   m_Size: {x: 7.13, y: 2.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &311125113
@@ -625,6 +625,7 @@ GameObject:
   - component: {fileID: 702897024}
   - component: {fileID: 702897027}
   - component: {fileID: 702897028}
+  - component: {fileID: 702897029}
   m_Layer: 0
   m_Name: Coyote
   m_TagString: Untagged
@@ -784,6 +785,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coyoteRigidbody: {fileID: 702897024}
+--- !u!95 &702897029
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702897023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 02eef1cd0eb9a435db0ff934ff3daedd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &782436632
 GameObject:
   m_ObjectHideFlags: 0
