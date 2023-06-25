@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D coyoteRb;
     private Animator coyoteAnim;
     private SpriteRenderer coyoteSprite;
+    private BoxCollider2D coll;
+
+    [SerializeField] private LayerMask jumpability;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 6.5f;
     private float _rightVelocity = 0f;
@@ -28,8 +31,10 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         coyoteAnim = GetComponent<Animator>();
+        coll = GetComponent<BoxCollider2D>();
         coyoteRb = GetComponent<Rigidbody2D>();
         coyoteSprite = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -38,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         if (PauseScript.IsPaused) return;
         var x = 0f;
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && isGrounded())
         {
             // TODO something to prevent double jumps
             coyoteRb.velocity = Vector2.up * jumpForce;
@@ -127,5 +132,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         coyoteAnim.SetInteger("state", (int)state);
+    }
+
+    private bool isGrounded() {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpability);
+
     }
 }
