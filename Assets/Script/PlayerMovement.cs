@@ -14,7 +14,14 @@ public class PlayerMovement : MonoBehaviour
     private float _rightVelocity = 0f;
     private float _leftVelocity = 0f;
 
-    private enum moveState {idle, run, jump, fall};
+    private enum moveState
+    {
+        idle,
+        run,
+        jump,
+        fall
+    }
+
     private moveState state = moveState.idle;
 
     // Start is called before the first frame update
@@ -23,17 +30,17 @@ public class PlayerMovement : MonoBehaviour
         coyoteAnim = GetComponent<Animator>();
         coyoteRb = GetComponent<Rigidbody2D>();
         coyoteSprite = GetComponent<SpriteRenderer>();
-        
-
-}
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if (PauseScript.IsPaused) return;
         var x = 0f;
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
+            // TODO something to prevent double jumps
             coyoteRb.velocity = Vector2.up * jumpForce;
         }
 
@@ -80,29 +87,34 @@ public class PlayerMovement : MonoBehaviour
         {
             _leftVelocity = 0f;
         }
+
         if (x == 0)
         {
             // Take the current velocity and take 90% of its x value to slow down
             var alteredXVelocity = (coyoteRb.velocity.x * 0.95f);
             if (Math.Round(alteredXVelocity, 10) != 0) x = alteredXVelocity;
         }
+
         coyoteRb.velocity = new Vector2(x, coyoteRb.velocity.y);
 
         UpdateAnimationState();
     }
 
-    private void UpdateAnimationState() {
+    private void UpdateAnimationState()
+    {
         moveState state;
         float dirX = Input.GetAxisRaw("Horizontal");
         if (dirX > 0f) {
             state = moveState.run;
             coyoteSprite.flipX = false;
         }
-        else if (dirX < 0f) {
+        else if (dirX < 0f)
+        {
             state = moveState.run;
             coyoteSprite.flipX = true;
         }
-        else {
+        else
+        {
             state = moveState.idle;
         }
 
