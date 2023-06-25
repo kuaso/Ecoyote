@@ -7,6 +7,8 @@ TagManager:
   - Logic
   - badCollectibles
   - goodCollectibles
+  - fire
+  - trap
   layers:
   - Default
   - TransparentFX
