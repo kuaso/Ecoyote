@@ -18,7 +18,7 @@ public class CamerController : MonoBehaviour
             targetX = maxValues.x;
         }
 
-        float targetY = coyote.position.y + 1.5f;
+        float targetY = coyote.position.y + 1.3f;
         if (targetY < minValues.y)
         {
             targetY = minValues.y;
