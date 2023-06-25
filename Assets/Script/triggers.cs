@@ -12,6 +12,7 @@ public class itemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             health.TakeDamage();
         }
+        //I'll need wildfire/traps laterr
         else if (collision.gameObject.CompareTag("goodCollectibles"))
         {
             Destroy(collision.gameObject);
