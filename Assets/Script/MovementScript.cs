@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class MovementScript : MonoBehaviour
 {
-    public Rigidbody2D coyoteRigidbody;
+    [SerializeField] Rigidbody2D coyoteRigidbody;
     private bool _facingRight = true;
     private float _rightVelocity = 0f;
     private float _leftVelocity = 0f;
@@ -14,6 +14,7 @@ public class MovementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
