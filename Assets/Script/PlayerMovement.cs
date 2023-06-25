@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
+            // TODO something to prevent double jumps
             coyoteRb.velocity = Vector2.up * jumpForce;
         }
 
