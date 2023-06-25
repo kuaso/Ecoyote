@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D coyoteRb;
     private Animator coyoteAnim;
     private SpriteRenderer coyoteSprite;
-    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 6.5f;
     private float _rightVelocity = 0f;
     private float _leftVelocity = 0f;
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                _rightVelocity = 5f;
+                _rightVelocity = moveSpeed;
             }
 
             x += _rightVelocity;
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                _leftVelocity = 5f;
+                _leftVelocity = moveSpeed;
             }
 
             x -= _leftVelocity;
@@ -94,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateAnimationState() {
         moveState state;
         float dirX = Input.GetAxisRaw("Horizontal");
-
         if (dirX > 0f) {
             state = moveState.run;
             coyoteSprite.flipX = false;
@@ -107,10 +106,10 @@ public class PlayerMovement : MonoBehaviour
             state = moveState.idle;
         }
 
-        if (coyoteRb.velocity.y > 0.1f) {
+        if (coyoteRb.velocity.y > 0.01f) {
             state = moveState.jump;
         }
-        else if (coyoteRb.velocity.y < 0.1f)
+        else if (coyoteRb.velocity.y < -0.1f)
         {
             state = moveState.fall;
         }
