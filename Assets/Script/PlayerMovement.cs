@@ -28,11 +28,10 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _coyoteAnim = GetComponent<Animator>();
-        _coll = GetComponent<BoxCollider2D>();
         _coyoteRb = GetComponent<Rigidbody2D>();
+        _coyoteAnim = GetComponent<Animator>();
         _coyoteSprite = GetComponent<SpriteRenderer>();
-
+        _coll = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
