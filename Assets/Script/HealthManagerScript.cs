@@ -58,7 +58,8 @@ public class HealthManagerScript : MonoBehaviour
             // Might cause NullReferenceExceptions, but that doesn't matter since we are changing scenes
             coyote.SetActive(false);
 
-            SceneManager.LoadScene($"Stage{LevelTrackerScript.Level}Scene");
+            // Restart level
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             _health = 3;
             foreach (var heart in hearts)
             {
