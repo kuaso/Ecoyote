@@ -6,34 +6,32 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D coyoteRb;
-    private Animator coyoteAnim;
-    private SpriteRenderer coyoteSprite;
-    private BoxCollider2D coll;
+    private Rigidbody2D _coyoteRb;
+    private Animator _coyoteAnim;
+    private SpriteRenderer _coyoteSprite;
+    private BoxCollider2D _coll;
 
-    [SerializeField] private LayerMask jumpability;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 6.5f;
-    private float _rightVelocity = 0f;
-    private float _leftVelocity = 0f;
+    [SerializeField] private LayerMask jumpAbility;
+    [SerializeField] public float maxMoveSpeed;
+    [SerializeField] public float jumpForce;
+    private float _rightVelocity;
+    private float _leftVelocity;
 
-    private enum moveState
+    private enum MoveState
     {
-        idle,
-        run,
-        jump,
-        fall
+        Idle,
+        Run,
+        Jump,
+        Fall
     }
-
-    private moveState state = moveState.idle;
 
     // Start is called before the first frame update
     void Start()
     {
-        coyoteAnim = GetComponent<Animator>();
-        coll = GetComponent<BoxCollider2D>();
-        coyoteRb = GetComponent<Rigidbody2D>();
-        coyoteSprite = GetComponent<SpriteRenderer>();
+        _coyoteAnim = GetComponent<Animator>();
+        _coll = GetComponent<BoxCollider2D>();
+        _coyoteRb = GetComponent<Rigidbody2D>();
+        _coyoteSprite = GetComponent<SpriteRenderer>();
 
     }
 
@@ -43,10 +41,9 @@ public class PlayerMovement : MonoBehaviour
         if (PauseScript.IsPaused) return;
         var x = 0f;
 
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && isGrounded())
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && CanJump())
         {
-            // TODO something to prevent double jumps
-            coyoteRb.velocity = Vector2.up * jumpForce;
+            _coyoteRb.velocity = Vector2.up * jumpForce;
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
@@ -55,13 +52,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 _rightVelocity = 0.5f;
             }
-            else if (_rightVelocity < 5f)
+            else if (_rightVelocity <= maxMoveSpeed)
             {
                 _rightVelocity *= 1.1f;
             }
-            else
+            
+            if (_rightVelocity > maxMoveSpeed)
             {
-                _rightVelocity = moveSpeed;
+                _rightVelocity = maxMoveSpeed;
             }
 
             x += _rightVelocity;
@@ -77,13 +75,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 _leftVelocity = 0.5f;
             }
-            else if (_leftVelocity < 5f)
+            else if (_leftVelocity <= maxMoveSpeed)
             {
                 _leftVelocity *= 1.1f;
             }
-            else
+            
+            if (_leftVelocity > maxMoveSpeed)
             {
-                _leftVelocity = moveSpeed;
+                _leftVelocity = maxMoveSpeed;
             }
 
             x -= _leftVelocity;
@@ -95,47 +94,45 @@ public class PlayerMovement : MonoBehaviour
 
         if (x == 0)
         {
-            // Take the current velocity and take 90% of its x value to slow down
-            var alteredXVelocity = (coyoteRb.velocity.x * 0.95f);
+            // Take the current velocity and take 95% of its x value to slow down
+            var alteredXVelocity = (_coyoteRb.velocity.x * 0.95f);
             if (Math.Round(alteredXVelocity, 10) != 0) x = alteredXVelocity;
         }
 
-        coyoteRb.velocity = new Vector2(x, coyoteRb.velocity.y);
+        _coyoteRb.velocity = new Vector2(x, _coyoteRb.velocity.y);
 
         UpdateAnimationState();
     }
 
     private void UpdateAnimationState()
     {
-        moveState state;
+        MoveState state;
         float dirX = Input.GetAxisRaw("Horizontal");
         if (dirX > 0f) {
-            state = moveState.run;
-            coyoteSprite.flipX = false;
+            state = MoveState.Run;
+            _coyoteSprite.flipX = false;
         }
         else if (dirX < 0f)
         {
-            state = moveState.run;
-            coyoteSprite.flipX = true;
+            state = MoveState.Run;
+            _coyoteSprite.flipX = true;
         }
         else
         {
-            state = moveState.idle;
+            state = MoveState.Idle;
         }
 
-        if (coyoteRb.velocity.y > 0.01f) {
-            state = moveState.jump;
+        if (_coyoteRb.velocity.y > 0.01f) {
+            state = MoveState.Jump;
         }
-        else if (coyoteRb.velocity.y < -0.1f)
+        else if (_coyoteRb.velocity.y < -0.1f)
         {
-            state = moveState.fall;
+            state = MoveState.Fall;
         }
 
-        coyoteAnim.SetInteger("state", (int)state);
+        _coyoteAnim.SetInteger("state", (int)state);
     }
 
-    private bool isGrounded() {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpability);
-
-    }
+    private bool CanJump() => Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, 0.1f, jumpAbility);
+    
 }
