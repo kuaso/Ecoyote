@@ -10,16 +10,13 @@ public class TriggersScript : MonoBehaviour
 
     public HealthManagerScript healthManager;
     private PlayerMovement _movement;
-    private Rigidbody2D _coyoteRb;
 
     private float _origMaxMoveSpeed;
     private bool _isTrapped;
 
     void Start()
     {
-        _coyoteRb = GetComponent<Rigidbody2D>();
         _movement = GetComponent<PlayerMovement>();
-
     }
 
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
@@ -31,14 +28,12 @@ public class TriggersScript : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("goodCollectables"))
         {
-            if (healthManager.Health < healthManager.maxHealth)
-            {
-                Destroy(collision.gameObject);
-                healthManager.Heal();
-            }
+            Destroy(collision.gameObject);
+            healthManager.Heal();
         }
 
-        else if (collision.gameObject.CompareTag("enemy")) {
+        else if (collision.gameObject.CompareTag("enemy"))
+        {
             yield return healthManager.TakeDamage();
         }
         else if (collision.gameObject.CompareTag("fire"))
@@ -52,7 +47,7 @@ public class TriggersScript : MonoBehaviour
             if (!_isTrapped)
             {
                 _isTrapped = true;
-                
+
                 _origMaxMoveSpeed = _movement.maxMoveSpeed;
                 // Should be set to false on exit of trap
             }
