@@ -14,7 +14,7 @@ public class HealthManagerScript : MonoBehaviour
     public GameObject coyote;
 
     public int Health => _health;
-    private bool hasDied;
+    private bool _hasDied;
 
     // To use in other scripts, assign this script to public HealthManagerScript healthManager; in other scripts
 
@@ -39,9 +39,9 @@ public class HealthManagerScript : MonoBehaviour
 
     public IEnumerator Die()
     {
-        if (!hasDied)
+        if (!_hasDied)
         {
-            hasDied = true;
+            _hasDied = true;
             coyoteRb.transform.Rotate(180, 0, 0);
             coyoteRb.velocity = new Vector2(0, coyoteRb.gravityScale * 10f);
 
