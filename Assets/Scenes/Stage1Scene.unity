@@ -16041,6 +16041,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 300171042}
     - target: {fileID: 4695325279372059969, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
+      propertyPath: trapAnim
+      value: 
+      objectReference: {fileID: 7613006029361810629}
+    - target: {fileID: 4695325279372059969, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
       propertyPath: healthManager
       value: 
       objectReference: {fileID: 1410021563}
@@ -16790,6 +16794,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ad1905ba57e4ce9a364771997a1fc4, type: 3}
+--- !u!95 &7613006029361810629 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7384218871547296447, guid: a7ad1905ba57e4ce9a364771997a1fc4, type: 3}
+  m_PrefabInstance: {fileID: 7613006029361810625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8220364533836721539
 PrefabInstance:
   m_ObjectHideFlags: 0

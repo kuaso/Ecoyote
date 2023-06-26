@@ -19,6 +19,7 @@ public class TriggersScript : MonoBehaviour
     {
         _coyoteRb = GetComponent<Rigidbody2D>();
         _movement = GetComponent<PlayerMovement>();
+
     }
 
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
@@ -47,11 +48,11 @@ public class TriggersScript : MonoBehaviour
         else if (collision.gameObject.CompareTag("trap"))
         {
             yield return healthManager.TakeDamage();
-
             // Only update original max speed and jump if the values have not been changed by the trap
             if (!_isTrapped)
             {
                 _isTrapped = true;
+                
                 _origMaxMoveSpeed = _movement.maxMoveSpeed;
                 // Should be set to false on exit of trap
             }
