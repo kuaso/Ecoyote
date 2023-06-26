@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class HealthManagerScript : MonoBehaviour
@@ -15,7 +16,7 @@ public class HealthManagerScript : MonoBehaviour
     public GameObject coyote;
 
     public int Health => _health;
-    private bool _hasDied;
+    public bool hasDied;
 
     // To use in other scripts, assign this script to public HealthManagerScript healthManager; in other scripts
 
@@ -40,13 +41,13 @@ public class HealthManagerScript : MonoBehaviour
 
     public IEnumerator Die()
     {
-        if (!_hasDied)
+        if (!hasDied)
         {
+            hasDied = true;
             foreach (var heart in hearts)
             {
                 heart.sprite = emptyHeart;
             }
-            _hasDied = true;
             coyoteRb.transform.Rotate(180, 0, 0);
             coyoteRb.velocity = new Vector2(0, coyoteRb.gravityScale * 10f);
 

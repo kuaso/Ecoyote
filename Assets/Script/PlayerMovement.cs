@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PauseScript.IsPaused || healthManager.Health == 0 || endLevelScript.isLevelOver) return;
+        if (PauseScript.IsPaused || healthManager.hasDied || endLevelScript.isLevelOver) return;
         var x = 0f;
 
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) &&
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimationState();
     }
 
-    private void UpdateAnimationState()
+    public void UpdateAnimationState()
     {
         MoveState state;
         float dirX = Input.GetAxisRaw("Horizontal");
