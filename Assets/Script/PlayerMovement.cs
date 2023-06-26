@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float _leftVelocity;
 
     public HealthManagerScript healthManager;
+    public EndLevelScript endLevelScript;
 
     private enum MoveState
     {
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PauseScript.IsPaused || healthManager.Health == 0) return;
+        if (PauseScript.IsPaused || healthManager.Health == 0 || endLevelScript.isLevelOver) return;
         var x = 0f;
 
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) &&
