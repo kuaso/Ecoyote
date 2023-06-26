@@ -111,6 +111,11 @@ public class PlayerMovement : MonoBehaviour
             state = MoveState.Run;
             _coyoteSprite.flipX = true;
         }
+        else if (endLevelScript.isLevelOver)
+        {
+            state = MoveState.Run;
+            _coyoteSprite.flipX = false;
+        }
         else
         {
             state = MoveState.Idle;
@@ -127,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
         _coyoteAnim.SetInteger("state", (int)state);
     }
-
+    
     private bool CanJump() =>
         Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, 0.1f, jumpAbility);
 }
