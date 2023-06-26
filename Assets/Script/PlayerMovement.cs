@@ -49,13 +49,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            if (_rightVelocity == 0f)
+            if (_rightVelocity <= maxMoveSpeed)
             {
-                _rightVelocity = 0.5f;
-            }
-            else if (_rightVelocity <= maxMoveSpeed)
-            {
-                _rightVelocity *= 1.1f;
+                _rightVelocity += 0.5f;
             }
             
             if (_rightVelocity > maxMoveSpeed)
@@ -72,13 +68,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            if (_leftVelocity == 0f)
+            if (_leftVelocity <= maxMoveSpeed)
             {
-                _leftVelocity = 0.5f;
-            }
-            else if (_leftVelocity <= maxMoveSpeed)
-            {
-                _leftVelocity *= 1.1f;
+                _leftVelocity += 0.5f;
             }
             
             if (_leftVelocity > maxMoveSpeed)
