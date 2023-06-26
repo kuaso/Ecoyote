@@ -42,7 +42,8 @@ public class PlayerMovement : MonoBehaviour
         if (PauseScript.IsPaused || healthManager.Health == 0) return;
         var x = 0f;
 
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && CanJump())
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) &&
+            CanJump())
         {
             _coyoteRb.velocity = Vector2.up * jumpForce;
         }
@@ -53,8 +54,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 _rightVelocity += 0.5f;
             }
-            
-            if (_rightVelocity > maxMoveSpeed)
+            else
             {
                 _rightVelocity = maxMoveSpeed;
             }
@@ -72,8 +72,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 _leftVelocity += 0.5f;
             }
-            
-            if (_leftVelocity > maxMoveSpeed)
+            else
             {
                 _leftVelocity = maxMoveSpeed;
             }
@@ -101,7 +100,8 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveState state;
         float dirX = Input.GetAxisRaw("Horizontal");
-        if (dirX > 0f) {
+        if (dirX > 0f)
+        {
             state = MoveState.Run;
             _coyoteSprite.flipX = false;
         }
@@ -115,7 +115,8 @@ public class PlayerMovement : MonoBehaviour
             state = MoveState.Idle;
         }
 
-        if (_coyoteRb.velocity.y > 0.01f) {
+        if (_coyoteRb.velocity.y > 0.01f)
+        {
             state = MoveState.Jump;
         }
         else if (_coyoteRb.velocity.y < -0.1f)
@@ -126,6 +127,6 @@ public class PlayerMovement : MonoBehaviour
         _coyoteAnim.SetInteger("state", (int)state);
     }
 
-    private bool CanJump() => Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, 0.1f, jumpAbility);
-    
+    private bool CanJump() =>
+        Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, 0.1f, jumpAbility);
 }
