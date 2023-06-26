@@ -989,8 +989,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 0}
-  movement: {fileID: 0}
-  coyote: {fileID: 702897026}
 --- !u!61 &652737097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1152,7 +1150,6 @@ GameObject:
   - component: {fileID: 702897025}
   - component: {fileID: 702897024}
   - component: {fileID: 702897027}
-  - component: {fileID: 702897028}
   - component: {fileID: 702897029}
   - component: {fileID: 702897030}
   - component: {fileID: 702897031}
@@ -1302,19 +1299,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.62166667}
   m_EdgeRadius: 0
---- !u!114 &702897028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702897023}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04e3a1278c4d5433fbf5578628eef675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coyoteRigidbody: {fileID: 702897024}
 --- !u!95 &702897029
 Animator:
   serializedVersion: 5
@@ -1366,8 +1350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1410021563}
-  movement: {fileID: 702897030}
-  coyote: {fileID: 702897024}
 --- !u!1 &710327862
 GameObject:
   m_ObjectHideFlags: 0
