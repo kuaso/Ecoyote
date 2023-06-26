@@ -10,14 +10,11 @@ public class enemyMovement : MonoBehaviour
     public Rigidbody2D coyoteRb;
     [SerializeField] float speed;
     public SpriteRenderer enemySprite;
-
-    private Animator coyoteAnim;
     private Transform currentPoint;
 
     private void Start()
     {
         coyoteRb = GetComponent<Rigidbody2D>();
-        coyoteAnim = GetComponent<Animator>();
         currentPoint = pointA.transform;
 
     }
@@ -40,7 +37,7 @@ public class enemyMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
         {
             currentPoint = pointA.transform;
-            enemySprite.flipX = true;
+            enemySprite.flipX = false;
         }
     }
 
