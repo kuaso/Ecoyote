@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165157793114690159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -1.43, z: 0}
+  m_LocalPosition: {x: -7, y: -1.35, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -148,11 +148,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.02094376}
+  m_Offset: {x: 0.1, y: -0.02094376}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.76, y: 0.67}
+    oldSize: {x: 1.11, y: 0.8}
     newSize: {x: 1.11, y: 0.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -200,6 +200,7 @@ MonoBehaviour:
   maxMoveSpeed: 7
   jumpForce: 6.5
   healthManager: {fileID: 0}
+  endLevelScript: {fileID: 0}
 --- !u!114 &4695325279372059969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,4 +214,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthManager: {fileID: 0}
-  trapAnim: {fileID: 7384218871547296447, guid: a7ad1905ba57e4ce9a364771997a1fc4, type: 3}

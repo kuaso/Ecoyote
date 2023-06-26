@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamerController : MonoBehaviour
 {
     [SerializeField] Transform coyote;
-    [SerializeField] Vector3 minValues, maxValues;
+    [SerializeField] public Vector3 minValues, maxValues;
 
     // Update is called once per frame
     void Update()
