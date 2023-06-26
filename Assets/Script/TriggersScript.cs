@@ -65,8 +65,8 @@ public class TriggersScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("trap"))
         {
-            // Make use wait for 2 seconds after exiting the trap before restoring normal speed
-            yield return new WaitForSeconds(2);
+            // Make player wait for 1 seconds after exiting the trap before restoring normal speed
+            yield return new WaitForSeconds(1);
             _movement.maxMoveSpeed = _origMaxMoveSpeed;
             _isTrapped = false;
         }
