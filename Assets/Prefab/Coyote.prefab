@@ -213,3 +213,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthManager: {fileID: 0}
+  trapAnim: {fileID: 7384218871547296447, guid: a7ad1905ba57e4ce9a364771997a1fc4, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3725841991102593997}
   - component: {fileID: 3730648035195144734}
   - component: {fileID: 3409206611649265036}
+  - component: {fileID: -4626337983802831189}
   m_Layer: 0
   m_Name: tree trunks
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3730648035195144734
 SpriteRenderer:
@@ -92,7 +93,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4995810268590825814}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -130,3 +131,103 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2339249, y: 1.262141}
   m_EdgeRadius: 0
+--- !u!60 &-4626337983802831189
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4995810268590825814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.13, y: -0.47}
+      - {x: -0.04, y: -0.64}
+      - {x: -0.02, y: -0.77}
+      - {x: 0.03, y: -0.84}
+      - {x: 0.11, y: -0.83}
+      - {x: 0.17, y: -0.72999996}
+      - {x: 0.16, y: -0.57}
+      - {x: 0.26999998, y: -0.51}
+      - {x: 0.7, y: -0.78}
+      - {x: 0.78, y: -0.77}
+      - {x: 0.84, y: -0.64}
+      - {x: 0.78, y: -0.55}
+      - {x: 0.63, y: -0.31}
+      - {x: 0.84, y: -0.35}
+      - {x: 0.97999996, y: -0.34}
+      - {x: 1.17, y: -0.32}
+      - {x: 1.23, y: -0.26999998}
+      - {x: 1.23, y: -0.22}
+      - {x: 1.16, y: -0.17999999}
+      - {x: 1.05, y: -0.19999999}
+      - {x: 0.91999996, y: -0.07}
+      - {x: 0.84, y: -0.07}
+      - {x: 0.74, y: 0.11}
+      - {x: 0.53999996, y: 0.37}
+      - {x: 0.51, y: 0.56}
+      - {x: 0.48, y: 0.69}
+      - {x: 0.39999998, y: 0.72999996}
+      - {x: 0.31, y: 0.75}
+      - {x: 0.17999999, y: 0.83}
+      - {x: -0.03, y: 0.83}
+      - {x: -0.17, y: 0.82}
+      - {x: -0.34, y: 0.77}
+      - {x: -1.1948315, y: -0.3511973}
+      - {x: -0.35660553, y: 0.6978018}
+      - {x: -0.59999996, y: 0.42999998}
+      - {x: -0.59999996, y: 0.22999999}
+      - {x: -0.71999997, y: 0.21}
+      - {x: -0.83, y: 0.14}
+      - {x: -0.87, y: 0.02}
+      - {x: -0.91999996, y: -0.099999994}
+      - {x: -1.0699999, y: -0.17999999}
+      - {x: -1.14, y: -0.25}
+      - {x: -1.14, y: -0.34}
+      - {x: 0.13197052, y: 0.786801}
+      - {x: -0.98999995, y: -0.35999998}
+      - {x: -0.9, y: -0.34}
+      - {x: -0.72999996, y: -0.34}
+      - {x: -0.72999996, y: -0.78999996}
+      - {x: -0.71999997, y: -0.89}
+      - {x: -0.65999997, y: -0.94}
+      - {x: -0.59, y: -0.94}
+      - {x: -0.53, y: -0.9}
+      - {x: -0.48999998, y: -0.74}
+      - {x: -0.32999998, y: -0.53}
+      - {x: -0.14999999, y: -0.42}
+  m_UseDelaunayMesh: 0
