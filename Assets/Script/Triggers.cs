@@ -20,9 +20,8 @@ public class ItemCollector : MonoBehaviour
             health.Heal();
         }
         else if (collision.gameObject.CompareTag("fire")) {
-            health.TakeDamage();
-            movement.maxMoveSpeed = 0.5f;
-            //todo: half second before it takes damage again
+            health.TakeDamage(); 
+            // todo: half second before it takes damage again
         }
         else if (collision.gameObject.CompareTag("trap")) {
             health.TakeDamage();
