@@ -9,6 +9,7 @@ public class trapBehavior : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        anim.SetBool("isTrapped", false);
 
     }
 
