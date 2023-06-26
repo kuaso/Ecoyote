@@ -36,6 +36,10 @@ public class TriggersScript : MonoBehaviour
                 healthManager.Heal();
             }
         }
+
+        else if (collision.gameObject.CompareTag("enemy")) {
+            yield return healthManager.TakeDamage();
+        }
         else if (collision.gameObject.CompareTag("fire"))
         {
             yield return healthManager.TakeDamage();
