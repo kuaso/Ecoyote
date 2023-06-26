@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class HealthManagerScript : MonoBehaviour
 {
+    public int maxHealth = 3; // This really shouldn't be changed because the ui only has 3 hearts
     private int _health = 3;
     public Image[] hearts;
     public Sprite fullHeart;
@@ -21,7 +22,7 @@ public class HealthManagerScript : MonoBehaviour
     public void Heal(int healing = 1)
     {
         if (healing < 0) throw new System.Exception("Healing cannot be negative");
-        if (_health >= 3) _health = 3; // Cap at 3
+        if (_health >= maxHealth) _health = maxHealth;
         else _health += healing;
         hearts[_health - 1].sprite = fullHeart;
     }
