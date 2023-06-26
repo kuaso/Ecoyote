@@ -4,11 +4,5 @@ using UnityEngine;
 
 public class LevelTrackerScript : MonoBehaviour
 {
-    public int level = 1;
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static int Level = 1;
 }

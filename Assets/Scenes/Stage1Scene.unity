@@ -1633,6 +1633,7 @@ MonoBehaviour:
     m_Bits: 64
   maxMoveSpeed: 7
   jumpForce: 6.5
+  healthManager: {fileID: 1410021563}
 --- !u!114 &702897031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2041,6 +2042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b60196ca8aa4b8fb81e21f8eb0c2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
 --- !u!61 &1212930676
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2172,7 +2174,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1308379395
 GameObject:
@@ -2321,6 +2323,7 @@ MonoBehaviour:
   - {fileID: 2115019513}
   fullHeart: {fileID: 21300000, guid: d6000c3dc4515c65d99d0926a27faab9, type: 3}
   emptyHeart: {fileID: 21300000, guid: a3a7ea706df3e747ea7dcd2d401cbc7a, type: 3}
+  coyoteRb: {fileID: 702897024}
 --- !u!4 &1410021564
 Transform:
   m_ObjectHideFlags: 0
@@ -16513,6 +16516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b60196ca8aa4b8fb81e21f8eb0c2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
 --- !u!61 &1867771976
 BoxCollider2D:
   m_ObjectHideFlags: 0
