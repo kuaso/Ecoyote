@@ -9,6 +9,7 @@ TagManager:
   - goodCollectibles
   - fire
   - trap
+  - coyote
   layers:
   - Default
   - TransparentFX
