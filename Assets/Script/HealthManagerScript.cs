@@ -41,6 +41,10 @@ public class HealthManagerScript : MonoBehaviour
     {
         if (!_hasDied)
         {
+            foreach (var heart in hearts)
+            {
+                heart.sprite = emptyHeart;
+            }
             _hasDied = true;
             coyoteRb.transform.Rotate(180, 0, 0);
             coyoteRb.velocity = new Vector2(0, coyoteRb.gravityScale * 10f);

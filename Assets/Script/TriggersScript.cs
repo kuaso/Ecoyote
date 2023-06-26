@@ -46,10 +46,15 @@ public class TriggersScript : MonoBehaviour
             {
                 _isTrapped = true;
                 _origMaxMoveSpeed = _movement.maxMoveSpeed;
+                // Should be set to false on exit of trap
             }
 
             // Slow down for the entirety of the time that the player is in the trap
             _movement.maxMoveSpeed = _origMaxMoveSpeed * 0.2f;
+        }
+        else if (collision.gameObject.CompareTag("spikes"))
+        {
+            yield return healthManager.Die();
         }
     }
 
