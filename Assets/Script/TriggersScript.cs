@@ -33,11 +33,6 @@ public class TriggersScript : MonoBehaviour
                 Destroy(collision.gameObject);
                 healthManager.Heal();
             }
-            else if (collision.gameObject.CompareTag("fire"))
-            {
-                yield return healthManager.TakeDamage();
-                // todo: half second before it takes damage again
-            }
             else if (collision.gameObject.CompareTag("trap"))
             {
                 yield return healthManager.TakeDamage();
@@ -52,6 +47,15 @@ public class TriggersScript : MonoBehaviour
                 // Slow down for the entirety of the time that the player is in the trap
                 _movement.maxMoveSpeed = _origMaxMoveSpeed * 0.2f;
             }
+        }
+    }
+
+    private IEnumerator OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("fire"))
+        {
+            yield return healthManager.TakeDamage();
+            // todo: half second before it takes damage again
         }
     }
 
