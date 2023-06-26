@@ -16024,6 +16024,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1150388411106974034, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 1165157793114690159, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
       propertyPath: m_Name
       value: Coyote
@@ -16050,7 +16054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6108003281289759831, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.35
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 6108003281289759831, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
       propertyPath: m_LocalPosition.z
