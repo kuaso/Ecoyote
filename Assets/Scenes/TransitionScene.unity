@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3659, y: 176.63403}
+  m_AnchoredPosition: {x: 39.2, y: 176.63403}
   m_SizeDelta: {x: 1240.8784, y: 47.268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56301445
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 1152348287}
   - component: {fileID: 1152348286}
   m_Layer: 5
-  m_Name: transition
+  m_Name: coyote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
