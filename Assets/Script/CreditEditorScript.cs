@@ -26,8 +26,11 @@ public class CreditEditorScript : MonoBehaviour
             case var _ when coyoteRb.position.x >= maxX - 1f:
                 _creditText.text = "Thank you for playing!";
                 break;
+            case var _ when coyoteRb.position.x >= maxX / 6 * 5.3:
+                _creditText.text = "David Eirew (Narration)";
+                break;
             case var _ when coyoteRb.position.x >= maxX / 6 * 5:
-                _creditText.text = "Special Thanks to Our Sanity"; // Replace with external sources
+                _creditText.text = "Special Thanks";
                 break;
             case var _ when coyoteRb.position.x >= maxX / 6 * 4:
                 _creditText.text = "Soren Caron (Code)";
