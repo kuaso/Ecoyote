@@ -31,6 +31,10 @@ public class TriggersScript : MonoBehaviour
             Destroy(collision.gameObject);
             healthManager.Heal();
         }
+        else if (collision.gameObject.CompareTag("bullet")) {
+            Destroy(collision.gameObject);
+            yield return healthManager.TakeDamage();
+        }
 
         else if (collision.gameObject.CompareTag("enemy"))
         {
