@@ -1128,6 +1128,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1851350370}
     m_Modifications:
+    - target: {fileID: 2722666180278576468, guid: 1a654191794b74a1891b3f43d821657c, type: 3}
+      propertyPath: coyote
+      value: 
+      objectReference: {fileID: 819603084}
     - target: {fileID: 6508731265101811861, guid: 1a654191794b74a1891b3f43d821657c, type: 3}
       propertyPath: m_Name
       value: gunEnemy
