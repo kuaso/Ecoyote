@@ -48,7 +48,6 @@ public class CoyoteStateScript : MonoBehaviour
         if (coyoteRb.velocity.y > 0.01f)
         {
             state = AnimationState.Jump;
-            PlayerMovement.jumpSound.Play();
 
         }
         else if (coyoteRb.velocity.y < -0.1f)
