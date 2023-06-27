@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class transitionScene : MonoBehaviour
 {
-    [SerializeField] float time = 3f;
+    public float time = 5f;
 
     // Update is called once per frame
     void Update()

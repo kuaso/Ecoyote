@@ -14,6 +14,7 @@ public class HealthManagerScript : MonoBehaviour
     public Sprite emptyHeart;
     public Rigidbody2D coyoteRb;
     public CoyoteStateScript coyoteCoyoteStateScript;
+    // Use frames instead of time because we need we care about the perception of the animation rather than the real time
     private int _framesDamageShown = 16; // Start with a value higher than max to prevent from running
     private const int FramesDamageShownMax = 15; // DON'T MAKE THIS TOO LONG AS HURT ANIMATION IS STATIC DUE TO LACK OF TIME
     private bool _overrideMaxFramesDamageShown;

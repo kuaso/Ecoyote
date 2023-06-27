@@ -15,6 +15,7 @@ public class TriggersScript : MonoBehaviour
     private float _origMaxMoveSpeed;
     private bool _isTrapped;
 
+    private float _timeSinceLastFireTick = float.MaxValue;
 
     void Start()
     {
@@ -42,10 +43,6 @@ public class TriggersScript : MonoBehaviour
         {
             yield return healthManager.TakeDamage();
         }
-        else if (collision.gameObject.CompareTag("fire"))
-        {
-            yield return healthManager.TakeDamage();
-        }
         else if (collision.gameObject.CompareTag("trap"))
         {
             yield return healthManager.TakeDamage();
@@ -65,12 +62,30 @@ public class TriggersScript : MonoBehaviour
         else if (collision.gameObject.CompareTag("spikes"))
         {
             yield return healthManager.Die();
+            
+        }
+    }
+
+    private IEnumerator OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("fire"))
+        {
+            _timeSinceLastFireTick += Time.deltaTime;
+            if (_timeSinceLastFireTick > 1f)
+            {
+                _timeSinceLastFireTick = 0f;
+                yield return healthManager.TakeDamage();
+            }
         }
     }
 
     private IEnumerator OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("trap"))
+        if (collision.gameObject.CompareTag("fire"))
+        {
+            _timeSinceLastFireTick = float.MaxValue;
+        }
+        else if (collision.gameObject.CompareTag("trap"))
         {
             // Make player wait for 1 seconds after exiting the trap before restoring normal speed
             yield return new WaitForSeconds(1);
