@@ -21,6 +21,7 @@ public class HealthManagerScript : MonoBehaviour
     public bool hasDied;
 
     [SerializeField] private AudioClip damageSound;
+    [SerializeField] private AudioClip dieSound;
 
     // To use in other scripts, assign this script to public HealthManagerScript healthManager; in other scripts
     public void Update()
@@ -58,6 +59,7 @@ public class HealthManagerScript : MonoBehaviour
         if (!hasDied)
         {
             hasDied = true;
+            sound.instance.PlaySound(dieSound);
             _overrideMaxFramesDamageShown = true;
             foreach (var heart in hearts)
             {

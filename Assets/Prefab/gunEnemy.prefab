@@ -155,4 +155,5 @@ MonoBehaviour:
   bulletPos: {fileID: 2167279295256759800}
   frequency: 2
   distance: 15
+  shootSound: {fileID: 8300000, guid: cd760cb83839a41899e41cdac5102741, type: 3}
   coyote: {fileID: 1165157793114690159, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
