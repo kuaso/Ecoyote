@@ -1362,6 +1362,7 @@ MonoBehaviour:
   coyoteRb: {fileID: 2113735114}
   camScript: {fileID: 1182990653}
   coyoteCoyoteStateScript: {fileID: 263855402}
+  victorySound: {fileID: 8300000, guid: ea8d6728b16c44c97aea8a4537c6d810, type: 3}
 --- !u!61 &332457237
 BoxCollider2D:
   m_ObjectHideFlags: 0
