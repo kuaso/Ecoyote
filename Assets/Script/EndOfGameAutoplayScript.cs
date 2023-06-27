@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using TMPro.Examples;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndOfGameAutoplayScript : MonoBehaviour
 {
     private Rigidbody2D _coyoteRb;
     public CoyoteStateScript stateScript;
     public CamerController camScript;
+    private int _countedFrames = 0;
+    private const int MaxFramesTillReset = 300;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,11 @@ public class EndOfGameAutoplayScript : MonoBehaviour
         if (_coyoteRb.position.x >= camScript.maxValues.x)
         {
             stateScript.UpdateAnimationState(CoyoteStateScript.AnimationState.Idle);
+            ++_countedFrames;
+            if (_countedFrames >= MaxFramesTillReset)
+            {
+                SceneManager.LoadScene(0);
+            }
         }
         else
         {
