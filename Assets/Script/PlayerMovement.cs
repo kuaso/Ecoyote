@@ -7,8 +7,6 @@ using UnityEngine.Serialization;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _coyoteRb;
-    private Animator _coyoteAnim;
-    private SpriteRenderer _coyoteSprite;
     private BoxCollider2D _coll;
 
     [SerializeField] private LayerMask jumpAbility;
@@ -19,22 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     public HealthManagerScript healthManager;
     public EndLevelScript endLevelScript;
-
-    private enum MoveState
-    {
-        Idle,
-        Run,  //it's actually walk LOL
-        Jump,
-        Fall,
-        Hurt
-    }
+    public CoyoteStateScript coyoteStateScript;
 
     // Start is called before the first frame update
     void Start()
     {
         _coyoteRb = GetComponent<Rigidbody2D>();
-        _coyoteAnim = GetComponent<Animator>();
-        _coyoteSprite = GetComponent<SpriteRenderer>();
         _coll = GetComponent<BoxCollider2D>();
     }
 
@@ -95,46 +83,10 @@ public class PlayerMovement : MonoBehaviour
 
         _coyoteRb.velocity = new Vector2(x, _coyoteRb.velocity.y);
 
-        UpdateAnimationState();
+        coyoteStateScript.UpdateAnimationState();
     }
 
-    public void UpdateAnimationState()
-    {
-        MoveState state;
-        float dirX = Input.GetAxisRaw("Horizontal");
-        if (dirX > 0f)
-        {
-            state = MoveState.Run;
-            _coyoteSprite.flipX = false;
-        }
-        else if (dirX < 0f)
-        {
-            state = MoveState.Run;
-            _coyoteSprite.flipX = true;
-        }
-        else if (endLevelScript.isLevelOver)
-        {
-            state = MoveState.Run;
-            _coyoteSprite.flipX = false;
-        }
-        else
-        {
-            state = MoveState.Idle;
-        }
 
-        if (_coyoteRb.velocity.y > 0.01f)
-        {
-            state = MoveState.Jump;
-        }
-        else if (_coyoteRb.velocity.y < -0.1f)
-        {
-            state = MoveState.Fall;
-        }
-
-
-        _coyoteAnim.SetInteger("state", (int)state);
-    }
-    
     private bool CanJump() =>
         Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, 0.1f, jumpAbility);
 }

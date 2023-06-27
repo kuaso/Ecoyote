@@ -13,14 +13,21 @@ public class HealthManagerScript : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public Rigidbody2D coyoteRb;
-    public GameObject coyote;
-    public Animator _coyoteAnim;
-
-    public int Health => _health;
+    public CoyoteStateScript coyoteCoyoteStateScript;
+    private int _framesDamageShown = 16; // Start with a value higher than max to prevent from running
+    private const int FramesDamageShownMax = 15; // DON'T MAKE THIS TOO LONG AS HURT ANIMATION IS STATIC DUE TO LACK OF TIME
+    private bool _overrideMaxFramesDamageShown;
     public bool hasDied;
 
     // To use in other scripts, assign this script to public HealthManagerScript healthManager; in other scripts
-
+    public void Update()
+    {
+        if (_overrideMaxFramesDamageShown || _framesDamageShown < FramesDamageShownMax)
+        {
+            coyoteCoyoteStateScript.UpdateAnimationState(CoyoteStateScript.AnimationState.Hurt);
+            _framesDamageShown++;
+        }
+    }
 
     public void Heal(int healing = 1)
     {
@@ -35,6 +42,7 @@ public class HealthManagerScript : MonoBehaviour
         if (damage < 0) throw new System.Exception("Damage cannot be negative");
         if (_health > 0) _health -= damage;
         hearts[_health].sprite = emptyHeart;
+        _framesDamageShown = 0;
         if (_health <= 0)
         {
             yield return Die();
@@ -46,10 +54,12 @@ public class HealthManagerScript : MonoBehaviour
         if (!hasDied)
         {
             hasDied = true;
+            _overrideMaxFramesDamageShown = true;
             foreach (var heart in hearts)
             {
                 heart.sprite = emptyHeart;
             }
+
             coyoteRb.transform.Rotate(180, 0, 0);
             coyoteRb.velocity = new Vector2(0, coyoteRb.gravityScale * 10f);
 
@@ -57,18 +67,15 @@ public class HealthManagerScript : MonoBehaviour
             {
                 yield return null;
             }
-
-            // Might cause NullReferenceExceptions, but that doesn't matter since we are changing scenes
-            coyote.SetActive(false);
-
+            
             // Restart level
+            // Might cause NullReferenceExceptions, but that doesn't matter since we are changing scenes
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             _health = 3;
             foreach (var heart in hearts)
             {
                 heart.sprite = fullHeart;
             }
-            coyote.SetActive(true);
         }
     }
 }
