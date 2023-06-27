@@ -52,5 +52,7 @@ MonoBehaviour:
   fullHeart: {fileID: 21300000, guid: d6000c3dc4515c65d99d0926a27faab9, type: 3}
   emptyHeart: {fileID: 21300000, guid: a3a7ea706df3e747ea7dcd2d401cbc7a, type: 3}
   coyoteRb: {fileID: 0}
-  coyote: {fileID: 0}
+  coyoteCoyoteStateScript: {fileID: 0}
   hasDied: 0
+  damageSound: {fileID: 8300000, guid: 7c37488d898e14ee98a7f314c3a058ae, type: 3}
+  dieSound: {fileID: 8300000, guid: db3b253cedd8640ef9d43add51569413, type: 3}

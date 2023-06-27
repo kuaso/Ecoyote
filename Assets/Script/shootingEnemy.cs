@@ -8,6 +8,7 @@ public class shootingEnemy : MonoBehaviour
     [SerializeField] Transform bulletPos;
     [SerializeField] float frequency;
     [SerializeField] float distance;
+    [SerializeField] AudioClip shootSound;
 
     private float timer;
     public GameObject coyote;
@@ -35,6 +36,7 @@ public class shootingEnemy : MonoBehaviour
     }
 
     void shoot() {
+        sound.instance.PlaySound(shootSound);
         Instantiate(bullet, bulletPos.position, Quaternion.identity); 
     }
 }

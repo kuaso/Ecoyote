@@ -10,6 +10,7 @@ public class TriggersScript : MonoBehaviour
 
     public HealthManagerScript healthManager;
     private PlayerMovement _movement;
+    [SerializeField] private AudioClip trapSound;
 
     private float _origMaxMoveSpeed;
     private bool _isTrapped;
@@ -51,6 +52,7 @@ public class TriggersScript : MonoBehaviour
                 _isTrapped = true;
 
                 _origMaxMoveSpeed = _movement.maxMoveSpeed;
+                sound.instance.PlaySound(trapSound);
                 // Should be set to false on exit of trap
             }
 

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class sound : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static sound instance { get; private set; }
+    private AudioSource source;
+
+    private void Awake()
     {
-        
+        instance = this;
+        source = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void PlaySound(AudioClip _sound) {
+        source.PlayOneShot(_sound);
     }
 }

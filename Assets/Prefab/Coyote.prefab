@@ -199,6 +199,7 @@ MonoBehaviour:
     m_Bits: 64
   maxMoveSpeed: 7
   jumpForce: 6.5
+  jumpSound: {fileID: 8300000, guid: 2a4d681a1199541edad88f33697a3fff, type: 3}
   healthManager: {fileID: 0}
   endLevelScript: {fileID: 0}
   coyoteStateScript: {fileID: 0}
@@ -215,3 +216,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthManager: {fileID: 0}
+  trapSound: {fileID: 8300000, guid: 032ad4a0e711446a6955674503f18955, type: 3}
