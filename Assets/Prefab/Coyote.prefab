@@ -217,3 +217,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthManager: {fileID: 0}
   trapSound: {fileID: 8300000, guid: 032ad4a0e711446a6955674503f18955, type: 3}
+  eatSound: {fileID: 8300000, guid: c4eb9dba1993e44cd86873dbf6eb76d4, type: 3}
