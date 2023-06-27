@@ -14895,6 +14895,10 @@ PrefabInstance:
       propertyPath: coyote
       value: 
       objectReference: {fileID: 702897026}
+    - target: {fileID: 3680425449877354541, guid: e79b6c5903ff7451db3a7bbd00086f76, type: 3}
+      propertyPath: maxValues.x
+      value: 194.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
