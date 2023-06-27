@@ -22,6 +22,39 @@ jobs:
             Library-
 
       # Build
+      - name: Build Linux
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          buildName: ecoyote
+          targetPlatform: StandaloneLinux64
+          versioning: Semantic
+          
+      - name: Build Windows 
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          buildName: ecoyote
+          targetPlatform: StandaloneWindows
+          versioning: Semantic
+          
+      - name: Build Windows 64 bit
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          buildName: ecoyote
+          targetPlatform: StandaloneWindows64
+          versioning: Semantic
+          
       - name: Build project
         uses: game-ci/unity-builder@v2
         env:
@@ -29,9 +62,9 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          targetPlatform: WebGL
+          buildName: ecoyote
+          targetPlatform: StandaloneOSX
           versioning: Semantic
-
 
       # Output
       - uses: actions/upload-artifact@v2
