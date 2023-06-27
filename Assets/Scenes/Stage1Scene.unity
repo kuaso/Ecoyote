@@ -977,6 +977,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad589e3af5364346ac7c9ff979691d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &702897030 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5638540538258708592, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
+  m_PrefabInstance: {fileID: 1068391052951807939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &716204278
 GameObject:
   m_ObjectHideFlags: 0
@@ -16424,6 +16429,10 @@ PrefabInstance:
       propertyPath: coyoteRb
       value: 
       objectReference: {fileID: 702897024}
+    - target: {fileID: 5336782439851858953, guid: 5031302b0fb07485aae4a2dfc3db4953, type: 3}
+      propertyPath: _coyoteAnim
+      value: 
+      objectReference: {fileID: 702897030}
     - target: {fileID: 5336782439851858953, guid: 5031302b0fb07485aae4a2dfc3db4953, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 

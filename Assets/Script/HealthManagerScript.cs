@@ -14,11 +14,13 @@ public class HealthManagerScript : MonoBehaviour
     public Sprite emptyHeart;
     public Rigidbody2D coyoteRb;
     public GameObject coyote;
+    public Animator _coyoteAnim;
 
     public int Health => _health;
     public bool hasDied;
 
     // To use in other scripts, assign this script to public HealthManagerScript healthManager; in other scripts
+
 
     public void Heal(int healing = 1)
     {

@@ -23,9 +23,10 @@ public class PlayerMovement : MonoBehaviour
     private enum MoveState
     {
         Idle,
-        Run,
+        Run,  //it's actually walk LOL
         Jump,
-        Fall
+        Fall,
+        Hurt
     }
 
     // Start is called before the first frame update
@@ -129,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MoveState.Fall;
         }
+
 
         _coyoteAnim.SetInteger("state", (int)state);
     }
