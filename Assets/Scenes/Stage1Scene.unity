@@ -542,7 +542,7 @@ MonoBehaviour:
   isLevelOver: 0
   coyoteRb: {fileID: 702897024}
   camScript: {fileID: 519420033}
-  coyoteCoyoteStateScript: {fileID: 0}
+  coyoteCoyoteStateScript: {fileID: 1154652955}
 --- !u!114 &311125115 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7045946642564441593, guid: 0b2ffb5a947f24ac9ab9ff190d409043, type: 3}
