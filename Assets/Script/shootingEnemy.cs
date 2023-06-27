@@ -27,7 +27,8 @@ public class shootingEnemy : MonoBehaviour
         Vector2 coyotePos = coyote.transform.position;
         Vector2 bulletPosition = bulletPos.position;
         timer += Time.deltaTime;
-        if ((timer > frequency) && (bulletPosition.x - coyotePos.x) < distance)
+        Debug.Log(bulletPosition.x - coyotePos.x);
+        if ((timer > frequency) && (bulletPosition.x - coyotePos.x) < distance && coyotePos.x < bulletPosition.x)
         {
             
             timer = 0;

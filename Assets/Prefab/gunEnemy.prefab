@@ -154,5 +154,5 @@ MonoBehaviour:
   bullet: {fileID: 1929813166907029617, guid: 3a04e0556ab07419a96bdb5e5d347876, type: 3}
   bulletPos: {fileID: 2167279295256759800}
   frequency: 2
-  distance: 10
+  distance: 15
   coyote: {fileID: 1165157793114690159, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
