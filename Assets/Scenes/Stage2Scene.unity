@@ -753,6 +753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1851350370}
     m_Modifications:
+    - target: {fileID: 2722666180278576468, guid: 1a654191794b74a1891b3f43d821657c, type: 3}
+      propertyPath: distance
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6508731265101811861, guid: 1a654191794b74a1891b3f43d821657c, type: 3}
       propertyPath: m_Name
       value: gunEnemy
@@ -763,11 +767,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8828744086112164451, guid: 1a654191794b74a1891b3f43d821657c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.4698315
+      value: 12.29
       objectReference: {fileID: 0}
     - target: {fileID: 8828744086112164451, guid: 1a654191794b74a1891b3f43d821657c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0669472
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 8828744086112164451, guid: 1a654191794b74a1891b3f43d821657c, type: 3}
       propertyPath: m_LocalPosition.z
