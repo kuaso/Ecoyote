@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 116729292}
   - component: {fileID: 116729294}
   - component: {fileID: 116729293}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trashCan4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 160170308}
   - component: {fileID: 160170307}
   - component: {fileID: 160170306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trash_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,6 +1242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree trunks
       objectReference: {fileID: 0}
+    - target: {fileID: 4995810268590825814, guid: a1e4ceb2430b9456fa495abad54a58c9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1307,6 +1311,10 @@ PrefabInstance:
     - target: {fileID: 4995810268590825814, guid: a1e4ceb2430b9456fa495abad54a58c9, type: 3}
       propertyPath: m_Name
       value: tree trunks
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995810268590825814, guid: a1e4ceb2430b9456fa495abad54a58c9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1938,13 +1946,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555150980}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 158.9633, y: -2.95, z: 0}
   m_LocalScale: {x: 0.6870707, y: 1.2226195, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 683810418}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650814697
 GameObject:
@@ -1957,7 +1965,7 @@ GameObject:
   - component: {fileID: 650814698}
   - component: {fileID: 650814699}
   - component: {fileID: 650814700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trashcan2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2257,6 +2265,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 555150982}
+  - {fileID: 1381562375}
   - {fileID: 1901531925}
   - {fileID: 2093398951}
   m_Father: {fileID: 0}
@@ -2807,7 +2817,7 @@ GameObject:
   - component: {fileID: 1267020383}
   - component: {fileID: 1267020384}
   - component: {fileID: 1267020385}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trashCan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2942,7 +2952,7 @@ GameObject:
   - component: {fileID: 1324788045}
   - component: {fileID: 1324788047}
   - component: {fileID: 1324788046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trashcan3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3137,13 +3147,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381562373}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 52.5, y: -3.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 683810418}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1401505089
 PrefabInstance:
@@ -3228,7 +3238,7 @@ GameObject:
   - component: {fileID: 1417369049}
   - component: {fileID: 1417369051}
   - component: {fileID: 1417369050}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trashCan5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3689,7 +3699,7 @@ GameObject:
   - component: {fileID: 1542012191}
   - component: {fileID: 1542012193}
   - component: {fileID: 1542012192}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trashCan5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4091,7 +4101,7 @@ GameObject:
   - component: {fileID: 1655788279}
   - component: {fileID: 1655788281}
   - component: {fileID: 1655788280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trashCan (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4309,7 +4319,7 @@ GameObject:
   - component: {fileID: 1679570202}
   - component: {fileID: 1679570204}
   - component: {fileID: 1679570203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trashcan3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16564,6 +16574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: trashbags (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5847141334650304522, guid: 879fac7ac97da4d25974e63407993de7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6857252359693162193, guid: 879fac7ac97da4d25974e63407993de7, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -16690,6 +16704,10 @@ PrefabInstance:
     - target: {fileID: 5847141334650304522, guid: 879fac7ac97da4d25974e63407993de7, type: 3}
       propertyPath: m_Name
       value: trashbags
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847141334650304522, guid: 879fac7ac97da4d25974e63407993de7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6857252359693162193, guid: 879fac7ac97da4d25974e63407993de7, type: 3}
       propertyPath: m_RootOrder
