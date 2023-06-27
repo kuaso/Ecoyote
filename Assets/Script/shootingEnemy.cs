@@ -27,10 +27,8 @@ public class shootingEnemy : MonoBehaviour
         Vector2 coyotePos = coyote.transform.position;
         Vector2 bulletPosition = bulletPos.position;
         timer += Time.deltaTime;
-        Debug.Log(bulletPosition.x - coyotePos.x);
         if ((timer > frequency) && (bulletPosition.x - coyotePos.x) < distance && coyotePos.x < bulletPosition.x)
         {
-            
             timer = 0;
             shoot();
         }
@@ -38,14 +36,5 @@ public class shootingEnemy : MonoBehaviour
 
     void shoot() {
         Instantiate(bullet, bulletPos.position, Quaternion.identity); 
-    }
-
-    public static float AngleDir(Vector2 A, Vector2 B)
-    {
-        //returns a negative number if B is left of 
-        //positive if right of A
-        //or 0 if they are perfectly aligned
-
-        return -A.x * B.y + A.y * B.x;
     }
 }
