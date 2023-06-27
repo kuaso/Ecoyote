@@ -19,6 +19,8 @@ public class HealthManagerScript : MonoBehaviour
     private bool _overrideMaxFramesDamageShown;
     public bool hasDied;
 
+    [SerializeField] private AudioClip damageSound;
+
     // To use in other scripts, assign this script to public HealthManagerScript healthManager; in other scripts
     public void Update()
     {
@@ -47,6 +49,7 @@ public class HealthManagerScript : MonoBehaviour
         {
             yield return Die();
         }
+        sound.instance.PlaySound(damageSound);
     }
 
     public IEnumerator Die()

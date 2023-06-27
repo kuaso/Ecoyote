@@ -10,7 +10,7 @@ public class CoyoteStateScript : MonoBehaviour
     public Animator coyoteAnim;
     public EndLevelScript endLevelScript;
 
-    
+    private AudioClip jumpSound;
 
     public enum AnimationState
     {
@@ -48,6 +48,7 @@ public class CoyoteStateScript : MonoBehaviour
         if (coyoteRb.velocity.y > 0.01f)
         {
             state = AnimationState.Jump;
+            sound.instance.PlaySound(jumpSound);
 
         }
         else if (coyoteRb.velocity.y < -0.1f)
