@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class EndLevelScript : MonoBehaviour
 {
     public bool isLevelOver;
     public Rigidbody2D coyoteRb;
     public CamerController camScript;
-    public PlayerMovement playerMovementScript;
+    public CoyoteStateScript coyoteCoyoteStateScript;
 
     // Update is called once per frame
     void Update()
@@ -18,7 +19,7 @@ public class EndLevelScript : MonoBehaviour
             if (coyoteRb.transform.position.x < camScript.maxValues.x)
             {
                 coyoteRb.velocity = new Vector2(7f, coyoteRb.velocity.y);
-                playerMovementScript.UpdateAnimationState();
+                coyoteCoyoteStateScript.UpdateAnimationState();
             }
             else
             {
