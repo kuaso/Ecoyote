@@ -551,6 +551,54 @@ MonoBehaviour:
   coyote: {fileID: 819603090}
   minValues: {x: 0, y: 0, z: 0}
   maxValues: {x: 224.37, y: 0, z: 0}
+--- !u!1 &263855401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 263855403}
+  - component: {fileID: 263855402}
+  m_Layer: 0
+  m_Name: State Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &263855402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263855401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2edbcfed24d321cb3a8a9c319beb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coyoteRb: {fileID: 819603083}
+  coyoteSprite: {fileID: 819603092}
+  coyoteAnim: {fileID: 819603091}
+  endLevelScript: {fileID: 332457236}
+--- !u!4 &263855403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263855401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.788895, y: 1.645302, z: -10.080499}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &329638997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -645,7 +693,7 @@ MonoBehaviour:
   isLevelOver: 0
   coyoteRb: {fileID: 819603083}
   camScript: {fileID: 240276549}
-  playerMovementScript: {fileID: 819603085}
+  coyoteCoyoteStateScript: {fileID: 263855402}
 --- !u!61 &332457237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -815,13 +863,17 @@ PrefabInstance:
       propertyPath: endLevelScript
       value: 
       objectReference: {fileID: 332457236}
+    - target: {fileID: 4287273365610375128, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
+      propertyPath: coyoteStateScript
+      value: 
+      objectReference: {fileID: 263855402}
     - target: {fileID: 4695325279372059969, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
       propertyPath: healthManager
       value: 
       objectReference: {fileID: 1973910090}
     - target: {fileID: 6108003281289759831, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6108003281289759831, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -878,20 +930,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1165157793114690159, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
   m_PrefabInstance: {fileID: 819603082}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &819603085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4287273365610375128, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
-  m_PrefabInstance: {fileID: 819603082}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819603084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad589e3af5364346ac7c9ff979691d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &819603090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6108003281289759831, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
+  m_PrefabInstance: {fileID: 819603082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &819603091 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5638540538258708592, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
+  m_PrefabInstance: {fileID: 819603082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &819603092 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5355487341840951272, guid: e2a09a66a3f4143c896f21b3448ccbca, type: 3}
   m_PrefabInstance: {fileID: 819603082}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &930017470 stripped
@@ -1083,6 +1134,10 @@ PrefabInstance:
       propertyPath: coyoteRb
       value: 
       objectReference: {fileID: 819603083}
+    - target: {fileID: 5336782439851858953, guid: 5031302b0fb07485aae4a2dfc3db4953, type: 3}
+      propertyPath: coyoteCoyoteStateScript
+      value: 
+      objectReference: {fileID: 263855402}
     - target: {fileID: 7239415231286033690, guid: 5031302b0fb07485aae4a2dfc3db4953, type: 3}
       propertyPath: m_Name
       value: Health Manager
