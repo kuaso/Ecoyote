@@ -1,10 +1,10 @@
-name: Build for Linux
+name: Build for web and deploy
 
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 jobs:
   build:
-    name: Build for Linux
+    name: Build for WebGL
     runs-on: ubuntu-latest
     steps:
       # Checkout
@@ -22,7 +22,7 @@ jobs:
             Library-
 
       # Build
-      - name: Build Linux
+      - name: Build WebGl
         uses: game-ci/unity-builder@v2
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -30,7 +30,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           buildName: ecoyote
-          targetPlatform: StandaloneLinux64
+          targetPlatform: WebGL
           versioning: Semantic
 
       # Output
@@ -38,3 +38,10 @@ jobs:
         with:
           name: Build
           path: build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

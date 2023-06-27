@@ -1,4 +1,4 @@
-name: Build Unity project
+name: Build for Windows 64 bit
 
 on: [push, pull_request]
 
