@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: Build for Linux
+    name: Build for Windows 64 bit
     runs-on: ubuntu-latest
     steps:
       # Checkout
@@ -30,7 +30,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           buildName: ecoyote
-          targetPlatform: StandaloneLinux64
+          targetPlatform: StandaloneWindows64
           versioning: Semantic
 
       # Output
