@@ -362,6 +362,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2ffb5a947f24ac9ab9ff190d409043, type: 3}
+--- !u!114 &84595999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6422207223824902936, guid: 0b2ffb5a947f24ac9ab9ff190d409043, type: 3}
+  m_PrefabInstance: {fileID: 84595998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &84596000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7045946642564441593, guid: 0b2ffb5a947f24ac9ab9ff190d409043, type: 3}
+  m_PrefabInstance: {fileID: 84595998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &84596001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1011642882457495512, guid: 0b2ffb5a947f24ac9ab9ff190d409043, type: 3}
+  m_PrefabInstance: {fileID: 84595998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &215552275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1764,6 +1797,18 @@ PrefabInstance:
       propertyPath: coyoteRb
       value: 
       objectReference: {fileID: 819603083}
+    - target: {fileID: 5336782439851858953, guid: 5031302b0fb07485aae4a2dfc3db4953, type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 84596001}
+    - target: {fileID: 5336782439851858953, guid: 5031302b0fb07485aae4a2dfc3db4953, type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 84596000}
+    - target: {fileID: 5336782439851858953, guid: 5031302b0fb07485aae4a2dfc3db4953, type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 84595999}
     - target: {fileID: 5336782439851858953, guid: 5031302b0fb07485aae4a2dfc3db4953, type: 3}
       propertyPath: coyoteCoyoteStateScript
       value: 
