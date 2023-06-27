@@ -11,6 +11,8 @@ public class EndLevelScript : MonoBehaviour
     public CamerController camScript;
     public CoyoteStateScript coyoteCoyoteStateScript;
 
+    [SerializeField] AudioClip victorySound;
+
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +38,7 @@ public class EndLevelScript : MonoBehaviour
         if (collision.gameObject.CompareTag("coyote"))
         {
             isLevelOver = true;
+            sound.instance.PlaySound(victorySound);
         }
     }
 }
