@@ -7,10 +7,12 @@ public class bullet : MonoBehaviour
     private GameObject coyote;
     private Rigidbody2D rb;
     [SerializeField] float force;
+    [SerializeField] float timer;
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
+
         rb = GetComponent<Rigidbody2D>();
         coyote = GameObject.FindGameObjectWithTag("coyote");
 
@@ -22,6 +24,8 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Destroy(gameObject, timer); //why is this not working
         
+      
     }
 }
