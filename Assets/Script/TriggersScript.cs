@@ -11,6 +11,7 @@ public class TriggersScript : MonoBehaviour
     public HealthManagerScript healthManager;
     private PlayerMovement _movement;
     [SerializeField] private AudioClip trapSound;
+    [SerializeField] private AudioClip eatSound;
 
     private float _origMaxMoveSpeed;
     private bool _isTrapped;
@@ -33,6 +34,7 @@ public class TriggersScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             healthManager.Heal();
+            sound.instance.PlaySound(eatSound);
         }
         else if (collision.gameObject.CompareTag("bullet")) {
             Destroy(collision.gameObject);
