@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpAbility;
     [SerializeField] public float maxMoveSpeed;
     [SerializeField] private float jumpForce;
+    public AudioSource jumpSound;
+
     private float _rightVelocity;
     private float _leftVelocity;
 
