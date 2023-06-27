@@ -12,6 +12,7 @@ TagManager:
   - badCollectables
   - goodCollectables
   - enemy
+  - bullet
   layers:
   - Default
   - TransparentFX
