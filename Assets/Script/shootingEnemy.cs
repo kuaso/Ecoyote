@@ -7,6 +7,7 @@ public class shootingEnemy : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform bulletPos;
     [SerializeField] float frequency;
+    [SerializeField] float distance;
 
     private float timer;
     public GameObject coyote;
@@ -26,7 +27,7 @@ public class shootingEnemy : MonoBehaviour
         Vector2 coyotePos = coyote.transform.position;
         Vector2 bulletPosition = bulletPos.position;
         timer += Time.deltaTime;
-        if ((timer > frequency) && coyotePos.x < bulletPosition.x)
+        if ((timer > frequency) && (bulletPosition.x - coyotePos.x) < distance)
         {
             
             timer = 0;
