@@ -62,6 +62,11 @@ public class HealthManagerScript : MonoBehaviour
 
     public IEnumerator Die()
     {
+        yield return Die(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public IEnumerator Die(int buildIndex)
+    {
         if (!hasDied)
         {
             hasDied = true;
@@ -82,7 +87,7 @@ public class HealthManagerScript : MonoBehaviour
             
             // Restart level
             // Might cause NullReferenceExceptions, but that doesn't matter since we are changing scenes
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(buildIndex);
             _health = 3;
             foreach (var heart in hearts)
             {
