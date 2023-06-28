@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,11 @@ public class HealthManagerScript : MonoBehaviour
 
     [SerializeField] private AudioClip damageSound;
     [SerializeField] private AudioClip dieSound;
+
+    public void Start()
+    {
+        hasDied = false;
+    }
 
     // To use in other scripts, assign this script to public HealthManagerScript healthManager; in other scripts
     public void Update()
