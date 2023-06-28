@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.8372, y: 168.83472}
-  m_SizeDelta: {x: 1243.7058, y: 387.6694}
+  m_AnchoredPosition: {x: -2.2019, y: 49.4485}
+  m_SizeDelta: {x: 1207.7263, y: 626.4419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166143375
 MonoBehaviour:
@@ -181,9 +181,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Some messages
-
-'
+  m_text: "The world, once a majestic marvel, now a deadly wasteland. The coyote
+    can't help but feel sad and angry because of the humans' actions, especially
+    since the consequences were so preventable. The mass industrialization that lead
+    to the release of greenhouse gases and forest fires, and the mass urbanization
+    that lead to the destruction of nature. \n\nIn present day, we can still make
+    a difference and stop this from happening. By reducing our carbon footprint,
+    reducing, reusing, and recycling, we give a second thought to the wildlife that
+    inhabit the very same land we do. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -210,14 +215,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -485,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -557,7 +562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.8397, y: -328.6585}
+  m_AnchoredPosition: {x: -2.2019, y: -309}
   m_SizeDelta: {x: 1243.7, y: 59.1293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790068245
