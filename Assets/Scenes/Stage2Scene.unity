@@ -942,6 +942,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Size.y
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5526527037137885243, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
       propertyPath: m_Name
       value: toiletPaper
@@ -1006,6 +1022,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2205661900917101907, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Size.y
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526527037137885243, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
@@ -1887,6 +1919,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2205661900917101907, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Size.y
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549950635201016834, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
+      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5526527037137885243, guid: a4a874643dd97407aaa9a4fe9ffa8748, type: 3}
