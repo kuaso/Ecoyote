@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,11 @@ public class EndLevelScript : MonoBehaviour
 
     [SerializeField] AudioClip victorySound;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        isLevelOver = false;
+    }
+    
     void Update()
     {
         if (isLevelOver)
