@@ -23,8 +23,15 @@ public class CreditEditorScript : MonoBehaviour
         var maxX = camScript.maxValues.x;
         switch (coyoteRb.position.x)
         {
+           
             case var _ when coyoteRb.position.x >= maxX - 1f:
                 _creditText.text = "Thank you for playing!";
+                break;
+            case var _ when coyoteRb.position.x >= maxX / 7: //fix this kenneth
+                _creditText.text = "Poison Apple image from PngAAA\nTrash images from Saphatthachat (Freepik)\nFire image from A455dc (Pixel Art Maker)\nTree Trunk image from Mroker (Deviant Art)\nBandits - Pixel Art from Sven Thole (Asset Store)\nShooting Enemy image from MintFresh (OpenGameArt)\nMeat image from cadmium_red (Freepik)\n";
+                break;
+            case var _ when coyoteRb.position.x >= maxX / 7:
+                _creditText.text = "Assets credits";
                 break;
             case var _ when coyoteRb.position.x >= maxX / 6 * 5.3:
                 _creditText.text = "David Eirew (Narration)";
