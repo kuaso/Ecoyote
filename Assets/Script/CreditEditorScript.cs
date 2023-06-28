@@ -24,8 +24,14 @@ public class CreditEditorScript : MonoBehaviour
         switch (coyoteRb.position.x)
         {
            
-            case var _ when coyoteRb.position.x >= maxX / 8 * 7.8:
+            case var _ when coyoteRb.position.x >= maxX / 8 * 8.8:
                 _creditText.text = "Thank you for playing!";
+                break;
+            case var _ when coyoteRb.position.x >= maxX / 8 * 8.1:
+                _creditText.text = "Jump and land sound effect by “crixpydxck”\nFire sound effect from the YouTuber “Sound Effects”\nBird’s chirping sound effect “Pixabay”\nFirst level’s background music is from “Lexin Music”\nSecond level’s background music is from “Alexander Nakarada”\nDead body sound effect by “Mingo Sounds”\nDamage sound effect by “Universalsfield”\nCredits background music is from “Music-For-Videos”";
+                break;
+            case var _ when coyoteRb.position.x >= maxX / 8 * 7.8:
+                _creditText.text = "Sound credits";
                 break;
             case var _ when coyoteRb.position.x >= maxX / 8 * 7.1:
                 _creditText.text = "Bandits - Pixel Art from Sven Thole (Asset Store)\nShooting Enemy image from MintFresh (OpenGameArt)\nMeat image from cadmium_red (Freepik)\n";
